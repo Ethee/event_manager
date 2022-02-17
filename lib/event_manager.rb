@@ -24,12 +24,10 @@ end
 
 def clean_phone_number(phone_number)
   phone_number = phone_number.to_s.delete "()-. "
-  if phone_number.length === 10
+  if phone_number.length == 10
     puts "GOOD!"
-    return phone_number
-  elsif phone_number.length === 11 && phone_number[0] === '1'
+  elsif phone_number.length == 11 && phone_number[0] == '1'
     puts "GOOD!"
-    return phone_number
   else
     puts "BAD!"
   end
